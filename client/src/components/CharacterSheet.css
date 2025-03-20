@@ -1,0 +1,198 @@
+.character-sheet {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.empty-character {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #888;
+  text-align: center;
+  padding: 2rem;
+}
+
+.character-header {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.character-name {
+  margin: 0 0 0.25rem 0;
+  color: #f0f0f0;
+  font-size: 1.5rem;
+}
+
+.character-subtitle {
+  color: #aaa;
+  font-size: 1rem;
+}
+
+.edit-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.character-health {
+  margin-bottom: 1.5rem;
+}
+
+.hp-bar {
+  height: 10px;
+  background-color: #444;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.hp-fill {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 5px;
+}
+
+.hp-text {
+  font-size: 0.875rem;
+  color: #ddd;
+  text-align: right;
+}
+
+.character-section {
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  color: #c3a5f5;
+  font-size: 1.1rem;
+  margin: 0 0 1rem 0;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.5rem;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.stat-box {
+  background-color: #333;
+  padding: 0.75rem;
+  border-radius: 4px;
+  text-align: center;
+  border: 1px solid #444;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #aaa;
+  margin-bottom: 0.25rem;
+}
+
+.stat-value {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #f0f0f0;
+}
+
+.stat-modifier {
+  font-size: 0.875rem;
+  color: #c3a5f5;
+}
+
+.inventory-list,
+.abilities-list {
+  background-color: #333;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+}
+
+.inventory-list ul,
+.abilities-list ul {
+  margin: 0;
+  padding: 0 0 0 1.25rem;
+  color: #f0f0f0;
+}
+
+.inventory-list li,
+.abilities-list li {
+  margin-bottom: 0.5rem;
+}
+
+.empty-list {
+  color: #888;
+  text-align: center;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Edit form styles */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.5fr;
+  gap: 1rem;
+}
+
+.form-group label {
+  color: #aaa;
+  font-size: 0.875rem;
+}
+
+.form-group input {
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 4px;
+  padding: 0.75rem;
+  color: #f0f0f0;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #7e57c2;
+  box-shadow: 0 0 0 2px rgba(126, 87, 194, 0.3);
+}
+
+.stat-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stat-edit label {
+  color: #aaa;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.stat-edit input {
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 4px;
+  padding: 0.5rem;
+  color: #f0f0f0;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}

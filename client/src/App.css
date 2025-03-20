@@ -1,0 +1,174 @@
+/* Base styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  height: 100%;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2c2c2c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+/* App container */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Game interface */
+.game-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.game-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.game-header h1 {
+  margin: 0;
+  color: #c3a5f5;
+  font-size: 1.75rem;
+}
+
+.game-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.game-content {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 1.5rem;
+  flex: 1;
+  height: calc(100vh - 100px);
+}
+
+.game-main {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.game-main > .game-console {
+  flex: 1;
+  min-height: 0;
+}
+
+.game-sidebar {
+  height: 100%;
+  min-height: 0;
+}
+
+/* Error messages */
+.error-card {
+  margin-bottom: 1rem;
+  background-color: rgba(229, 57, 53, 0.1);
+  border: 1px solid #e53935;
+}
+
+.error-message {
+  color: #e57373;
+  margin: 0;
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #aaa;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 4px;
+  color: #f0f0f0;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #7e57c2;
+  box-shadow: 0 0 0 2px rgba(126, 87, 194, 0.3);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .game-content {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  
+  .game-main, .game-sidebar {
+    height: auto;
+  }
+  
+  .game-main {
+    margin-bottom: 1.5rem;
+  }
+  
+  .game-console {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .game-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .game-controls {
+    width: 100%;
+  }
+}

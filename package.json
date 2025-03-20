@@ -1,0 +1,42 @@
+{
+  "name": "ai-dnd-game",
+  "version": "1.0.0",
+  "description": "AI-powered D&D text adventure game",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "install-all": "npm install && npm run install-client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run install-client && npm run build",
+    "init-db": "node server/scripts/initDb.js",
+    "fix-db": "node server/scripts/fixDatabase.js"
+  },
+  "keywords": [
+    "ai",
+    "dnd",
+    "game",
+    "text-adventure"
+  ],
+  "author": "Prince Pipen",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.2.1",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.6.0",
+    "sequelize": "^6.32.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
